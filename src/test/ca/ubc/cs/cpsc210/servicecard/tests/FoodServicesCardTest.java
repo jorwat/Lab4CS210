@@ -25,13 +25,13 @@ class FoodServicesCardTest {
     }
 
     @Test
-    void testConstructor(){
+    void testConstructor() {
         c3 = new FoodServicesCard(200);
         c4 = new FoodServicesCard(0);
-        assertEquals(200,c3.getBalance());
-        assertEquals(0,c3.getRewardPoints());
-        assertEquals(0,c4.getBalance());
-        assertEquals(0,c4.getRewardPoints());
+        assertEquals(200, c3.getBalance());
+        assertEquals(0, c3.getRewardPoints());
+        assertEquals(0, c4.getBalance());
+        assertEquals(0, c4.getRewardPoints());
     }
 
     @Test
