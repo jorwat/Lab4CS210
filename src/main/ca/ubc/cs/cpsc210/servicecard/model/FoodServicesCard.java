@@ -16,19 +16,15 @@ public class FoodServicesCard {
     // REQUIRES: initialBalance >= 0
     // EFFECTS: constructs food service card with given initial balance in cents and zero reward points
     public FoodServicesCard(int initialBalance) {
-        if (initialBalance >= 0) {
-            balance = initialBalance;
-            points = 0;
-        }
+        balance = initialBalance;
+        points = 0;
     }
 
     // REQUIRES: amount > 0
     // MODIFIES: this
     // EFFECTS: adds amount cents to balance on card
     public void reload(int amount) {
-        if (amount >= 0) {
-            balance = balance + amount;
-        }
+        balance = balance + amount;
     }
 
     // MODIFIES: this
