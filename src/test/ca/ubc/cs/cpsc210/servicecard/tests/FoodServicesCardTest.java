@@ -60,6 +60,11 @@ class FoodServicesCardTest {
         assertEquals(610,c1.getBalance());
         assertEquals(200,c1.getRewardPoints());
         assertFalse(c2.makePurchase(2000));
+        cEmpty.reload(10000);
+        assertTrue(cEmpty.makePurchase(6100));
+        cEmpty.makePurchase(6100);
+        assertEquals(3930,cEmpty.getBalance());
+        assertEquals(100,cEmpty.getRewardPoints());
     }
 
 }

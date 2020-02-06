@@ -42,7 +42,7 @@ public class FoodServicesCard {
         if (balance >= amount) {
             balance = balance - amount;
             points = points + (REWARD_POINTS_PER_CENT_CHARGED * amount);
-            if (points >= POINTS_NEEDED_FOR_CASH_BACK) {
+            for (int i = points; i >= POINTS_NEEDED_FOR_CASH_BACK; i = i - POINTS_NEEDED_FOR_CASH_BACK) {
                 balance = balance + CASH_BACK_REWARD;
                 points = points - POINTS_NEEDED_FOR_CASH_BACK;
             }
